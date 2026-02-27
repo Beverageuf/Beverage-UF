@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Välj produkt</title>
+</head>
+<body>
+  <h2>Välj produkt</h2>
+
+  <button onclick="betala(50)">Celsius - 25 kr</button><br><br>
+  <button onclick="betala(75)">Clean - 25 kr</button><br><br>
+  <button onclick="betala(100)">Kexchoklad - 18 kr</button><br><br>
+  <button onclick="betala(150)">Vitamin well - 40 kr</button>
+
+  <script>
+    function betala(summa) {
+      const nummer = "46763443528"; 
+      const meddelande = "Betalning för produkt";
+      const url = `swish://payment?phone=${nummer}&amount=${summa}&message=${meddelande}`;
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>
+  
