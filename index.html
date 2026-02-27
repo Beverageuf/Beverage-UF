@@ -15,7 +15,7 @@
   <script>
     function betala(summa) {
       const nummer = "46763443528"; 
-      const meddelande = "Betalning för produkt";
+      const meddelande = "Betalningprodukt";
       const url = `swish://payment?phone=${nummer}&amount=${summa}&message=${meddelande}`;
       window.location.href = url;
     }
