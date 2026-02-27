@@ -13,14 +13,15 @@
   <button onclick="betala(150)">Vitamin well - 40 kr</button>
 
   <script>
-    function betala(summa) {
-      const nummer = "46763443528"; 
-      const meddelande = "Betalningprodukt";
-      const url = `swish://payment?phone=${nummer}&amount=${summa}&message=${meddelande}`;
-      window.location.href = url;
-    }
-  </script>
-
-</body>
-</html>
-  
+  function betala(summa) {
+    const nummer = "46701234567"; 
+    const meddelande = "Betalning";
+    window.location.href =
+      "https://app.swish.nu/1/p/sw/?sw=" +
+      nummer +
+      "&amount=" +
+      summa +
+      "&message=" +
+      meddelande;
+  }
+</script>
